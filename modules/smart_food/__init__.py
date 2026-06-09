@@ -1,0 +1,172 @@
+# ==========================================================
+# SCANIX AI
+# SYSTEM 7 - SMART FOOD INTELLIGENCE
+# PRODUCTION GRADE V1.0
+# ==========================================================
+
+
+from .smart_swap_service import SmartSwapService
+from .smart_swap_service import smart_swap_service
+from .smart_swap_service import get_swap_recommendations
+from .smart_swap_service import get_swap_by_barcode
+from .smart_swap_service import export_swaps_to_csv
+from .smart_swap_service import export_swaps_to_markdown
+from .smart_swap_service import export_swaps_to_html
+from .smart_swap_service import export_swaps_to_json
+from .smart_swap_service import export_swaps_to_excel
+from .smart_swap_service import get_analytics_summary
+from .smart_swap_service import clear_service_cache
+
+from .swap_models import (
+    SYSTEM_7_VERSION,
+    SYSTEM_7_BUILD_DATE,
+    SwapConfidence,
+    ImprovementDimension,
+    PriceSource,
+    NovaGroup,
+    NutriScoreGrade,
+    ProcessingLevel,
+    SortByOption,
+    IndianFoodCategory,
+    IndianBrandTier,
+    IndianState,
+    PriceRange,
+    PriceHistoryPoint,
+    PriceIntelligence,
+    HealthValueScore,
+    NutritionPer100g,
+    NutritionScore,
+    ImprovementMetrics,
+    AggregatedImprovement,
+    ComparisonData,
+    ComparisonSummary,
+    SwapCandidate,
+    SmartSwapResponse,
+    SwapRequest,
+    ErrorDetail,
+    ErrorResponse,
+    INDIAN_PRODUCTS_DATABASE,
+    IndianDatabaseHelper,
+    generate_request_id,
+    calculate_hash,
+    normalize_product_name,
+    calculate_nutriscore,
+)
+
+from .swap_providers import (
+    AIClientWithFallback,
+    OpenFoodFactsProvider,
+    GoogleCSEProvider,
+    TavilyProvider,
+    USDAProvider,
+    PriceIntelligenceProvider,
+    GeminiAlternativeProvider,
+    CacheManager,
+    RateLimiter,
+    HealthScoreCalculator,
+    DeceptionDetector,
+    NutritionValidator,
+    BatchProcessor,
+    NutritionNormalizer,
+    MasterDiscoveryEngine,
+    ai_client,
+    openfoodfacts_provider,
+    google_cse_provider,
+    tavily_provider,
+    usda_provider,
+    price_intelligence_provider,
+    gemini_alternative_provider,
+    cache_manager,
+    master_discovery_engine,
+    health_calculator,
+    deception_detector,
+    nutrition_validator,
+    batch_processor,
+    nutrition_normalizer,
+    get_ai_reasoning,
+    get_batch_ai_reasoning,
+)
+
+
+__all__ = [
+    # Services
+    "SmartSwapService",
+    "smart_swap_service",
+    "get_swap_recommendations",
+    "get_swap_by_barcode",
+    "export_swaps_to_csv",
+    "export_swaps_to_markdown",
+    "export_swaps_to_html",
+    "export_swaps_to_json",
+    "export_swaps_to_excel",
+    "get_analytics_summary",
+    "clear_service_cache",
+    
+    # Models
+    "SYSTEM_7_VERSION",
+    "SYSTEM_7_BUILD_DATE",
+    "SwapConfidence",
+    "ImprovementDimension",
+    "PriceSource",
+    "NovaGroup",
+    "NutriScoreGrade",
+    "ProcessingLevel",
+    "SortByOption",
+    "IndianFoodCategory",
+    "IndianBrandTier",
+    "IndianState",
+    "PriceRange",
+    "PriceHistoryPoint",
+    "PriceIntelligence",
+    "HealthValueScore",
+    "NutritionPer100g",
+    "NutritionScore",
+    "ImprovementMetrics",
+    "AggregatedImprovement",
+    "ComparisonData",
+    "ComparisonSummary",
+    "SwapCandidate",
+    "SmartSwapResponse",
+    "SwapRequest",
+    "ErrorDetail",
+    "ErrorResponse",
+    "INDIAN_PRODUCTS_DATABASE",
+    "IndianDatabaseHelper",
+    "generate_request_id",
+    "calculate_hash",
+    "normalize_product_name",
+    "calculate_nutriscore",
+    
+    # Providers
+    "AIClientWithFallback",
+    "OpenFoodFactsProvider",
+    "GoogleCSEProvider",
+    "TavilyProvider",
+    "USDAProvider",
+    "PriceIntelligenceProvider",
+    "GeminiAlternativeProvider",
+    "CacheManager",
+    "RateLimiter",
+    "HealthScoreCalculator",
+    "DeceptionDetector",
+    "NutritionValidator",
+    "BatchProcessor",
+    "NutritionNormalizer",
+    "MasterDiscoveryEngine",
+    "ai_client",
+    "openfoodfacts_provider",
+    "google_cse_provider",
+    "tavily_provider",
+    "usda_provider",
+    "price_intelligence_provider",
+    "gemini_alternative_provider",
+    "cache_manager",
+    "master_discovery_engine",
+    "health_calculator",
+    "deception_detector",
+    "nutrition_validator",
+    "batch_processor",
+    "nutrition_normalizer",
+    "get_ai_reasoning",
+    "get_batch_ai_reasoning",
+]

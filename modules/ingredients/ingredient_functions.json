@@ -1,0 +1,514 @@
+{
+  "sugar": {
+    "function": "SWEETENER",
+    "category": "CARBOHYDRATE",
+    "subcategory": "ADDED_SUGAR",
+    "description": "Provides sweetness and rapid energy.",
+    "used_in": ["BEVERAGES", "BAKERY", "CONFECTIONERY"],
+    "aliases": ["table sugar", "sucrose"]
+  },
+
+  "high fructose corn syrup": {
+    "function": "SWEETENER",
+    "category": "CARBOHYDRATE",
+    "subcategory": "ADDED_SUGAR",
+    "description": "Liquid sweetener derived from corn.",
+    "used_in": ["SOFT_DRINKS", "SNACKS", "PROCESSED_FOODS"],
+    "aliases": ["hfcs", "corn syrup"]
+  },
+
+  "maltodextrin": {
+    "function": "BULKING_AGENT",
+    "category": "CARBOHYDRATE",
+    "subcategory": "TEXTURE_MODIFIER",
+    "description": "Improves texture and acts as a filler.",
+    "used_in": ["SNACKS", "SPORTS_NUTRITION", "PROCESSED_FOODS"],
+    "aliases": []
+  },
+
+  "msg": {
+    "function": "FLAVOR_ENHANCER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "UMAMI_ENHANCER",
+    "description": "Enhances savory taste.",
+    "used_in": ["NOODLES", "SEASONINGS", "SNACKS"],
+    "aliases": ["monosodium glutamate", "ins 621", "e621"]
+  },
+
+  "sodium benzoate": {
+    "function": "PRESERVATIVE",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "ANTIMICROBIAL",
+    "description": "Prevents growth of bacteria and mold.",
+    "used_in": ["SOFT_DRINKS", "SAUCES", "PICKLES"],
+    "aliases": ["ins 211", "e211"]
+  },
+
+  "potassium sorbate": {
+    "function": "PRESERVATIVE",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "ANTIMICROBIAL",
+    "description": "Controls microbial spoilage.",
+    "used_in": ["DAIRY", "BAKERY", "BEVERAGES"],
+    "aliases": ["ins 202", "e202"]
+  },
+
+  "soy lecithin": {
+    "function": "EMULSIFIER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "EMULSIFIER",
+    "description": "Maintains stable oil-water mixtures.",
+    "used_in": ["CHOCOLATE", "BAKERY", "SNACKS"],
+    "aliases": ["lecithin", "ins 322", "e322"]
+  },
+
+  "mono and diglycerides": {
+    "function": "EMULSIFIER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "EMULSIFIER",
+    "description": "Improves texture and stability.",
+    "used_in": ["BAKERY", "ICE_CREAM", "PROCESSED_FOODS"],
+    "aliases": ["monoglycerides", "diglycerides"]
+  },
+
+  "guar gum": {
+    "function": "THICKENER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "HYDROCOLLOID",
+    "description": "Improves viscosity and texture.",
+    "used_in": ["DAIRY", "SAUCES", "BEVERAGES"],
+    "aliases": []
+  },
+
+  "xanthan gum": {
+    "function": "STABILIZER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "HYDROCOLLOID",
+    "description": "Improves texture and shelf stability.",
+    "used_in": ["GLUTEN_FREE", "SAUCES", "DRESSINGS"],
+    "aliases": []
+  },
+
+  "citric acid": {
+    "function": "ACIDITY_REGULATOR",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "FOOD_ACID",
+    "description": "Controls acidity and flavor.",
+    "used_in": ["BEVERAGES", "CANDY", "SAUCES"],
+    "aliases": ["ins 330", "e330"]
+  },
+
+  "tartrazine": {
+    "function": "ARTIFICIAL_COLOR",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "SYNTHETIC_COLOR",
+    "description": "Yellow food coloring.",
+    "used_in": ["CANDY", "BEVERAGES", "SNACKS"],
+    "aliases": ["ins 102", "e102"]
+  },
+
+  "sunset yellow": {
+    "function": "ARTIFICIAL_COLOR",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "SYNTHETIC_COLOR",
+    "description": "Orange-yellow food coloring.",
+    "used_in": ["SNACKS", "BEVERAGES", "CANDY"],
+    "aliases": ["ins 110", "e110"]
+  },
+
+  "sucralose": {
+    "function": "ARTIFICIAL_SWEETENER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "HIGH_INTENSITY_SWEETENER",
+    "description": "Zero calorie sweetener.",
+    "used_in": ["DIET_DRINKS", "PROTEIN_PRODUCTS"],
+    "aliases": ["e955"]
+  },
+
+  "aspartame": {
+    "function": "ARTIFICIAL_SWEETENER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "HIGH_INTENSITY_SWEETENER",
+    "description": "Low calorie sweetener.",
+    "used_in": ["DIET_DRINKS", "SUGAR_FREE_PRODUCTS"],
+    "aliases": ["e951"]
+  },
+
+  "acesulfame potassium": {
+    "function": "ARTIFICIAL_SWEETENER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "HIGH_INTENSITY_SWEETENER",
+    "description": "Zero calorie sweetener.",
+    "used_in": ["DIET_DRINKS", "PROTEIN_PRODUCTS"],
+    "aliases": ["ace-k", "e950"]
+  },
+
+  "calcium propionate": {
+    "function": "PRESERVATIVE",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "ANTIMICROBIAL",
+    "description": "Prevents mold growth in baked goods.",
+    "used_in": ["BAKERY", "BREADS"],
+    "aliases": ["ins 282", "e282"]
+  },
+
+  "sodium nitrite": {
+    "function": "PRESERVATIVE",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "ANTIMICROBIAL",
+    "description": "Preserves meat and adds color.",
+    "used_in": ["PROCESSED_MEATS"],
+    "aliases": ["ins 250", "e250"]
+  },
+
+  "bha": {
+    "function": "ANTIOXIDANT",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "PRESERVATIVE",
+    "description": "Prevents fat oxidation.",
+    "used_in": ["SNACKS", "CEREALS", "OILS"],
+    "aliases": ["butylated hydroxyanisole", "e320"]
+  },
+
+  "bht": {
+    "function": "ANTIOXIDANT",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "PRESERVATIVE",
+    "description": "Prevents fat oxidation.",
+    "used_in": ["SNACKS", "CEREALS", "OILS"],
+    "aliases": ["butylated hydroxytoluene", "e321"]
+  },
+
+  "datem": {
+    "function": "EMULSIFIER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "DOUGH_CONDITIONER",
+    "description": "Improves dough stability and volume.",
+    "used_in": ["BAKERY", "BREADS"],
+    "aliases": ["diacetyl tartaric acid esters of monoglycerides", "e472e"]
+  },
+
+  "pgpr": {
+    "function": "EMULSIFIER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "EMULSIFIER",
+    "description": "Reduces fat content in chocolate.",
+    "used_in": ["CHOCOLATE", "CONFECTIONERY"],
+    "aliases": ["polyglycerol polyricinoleate", "e476"]
+  },
+
+  "polysorbate 80": {
+    "function": "EMULSIFIER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "EMULSIFIER",
+    "description": "Stabilizes emulsions.",
+    "used_in": ["ICE_CREAM", "BAKERY", "BEVERAGES"],
+    "aliases": ["tween 80", "e433"]
+  },
+
+  "carrageenan": {
+    "function": "THICKENER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "HYDROCOLLOID",
+    "description": "Gels and thickens food products.",
+    "used_in": ["DAIRY", "MEAT", "BEVERAGES"],
+    "aliases": ["e407"]
+  },
+
+  "agar agar": {
+    "function": "GELLING_AGENT",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "HYDROCOLLOID",
+    "description": "Plant-based gelatin substitute.",
+    "used_in": ["DESSERTS", "CONFECTIONERY"],
+    "aliases": ["e406"]
+  },
+
+  "pectin": {
+    "function": "GELLING_AGENT",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "HYDROCOLLOID",
+    "description": "Gels fruit-based products.",
+    "used_in": ["JAMS", "JELLIES", "DESSERTS"],
+    "aliases": ["e440"]
+  },
+
+  "allura red": {
+    "function": "ARTIFICIAL_COLOR",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "SYNTHETIC_COLOR",
+    "description": "Red food coloring.",
+    "used_in": ["CANDY", "BEVERAGES", "SNACKS"],
+    "aliases": ["red 40", "ins 129", "e129"]
+  },
+
+  "brilliant blue": {
+    "function": "ARTIFICIAL_COLOR",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "SYNTHETIC_COLOR",
+    "description": "Blue food coloring.",
+    "used_in": ["CANDY", "BEVERAGES", "ICE_CREAM"],
+    "aliases": ["blue 1", "ins 133", "e133"]
+  },
+
+  "vanaspati": {
+    "function": "FAT",
+    "category": "FAT_AND_OIL",
+    "subcategory": "HYDROGENATED_FAT",
+    "description": "Hydrogenated vegetable fat containing trans fats.",
+    "used_in": ["SNACKS", "BAKERY", "DEEP_FRIED"],
+    "aliases": ["dalda", "vanaspati ghee"]
+  },
+
+  "palm oil": {
+    "function": "FAT",
+    "category": "FAT_AND_OIL",
+    "subcategory": "VEGETABLE_OIL",
+    "description": "Vegetable oil high in saturated fat.",
+    "used_in": ["SNACKS", "BAKERY", "PROCESSED_FOODS"],
+    "aliases": ["palmolein", "palm kernel oil"]
+  },
+
+  "hydrogenated vegetable oil": {
+    "function": "FAT",
+    "category": "FAT_AND_OIL",
+    "subcategory": "HYDROGENATED_FAT",
+    "description": "Contains trans fats from hydrogenation.",
+    "used_in": ["SNACKS", "BAKERY", "MARGARINE"],
+    "aliases": ["hydrogenated fat", "partially hydrogenated oil"]
+  },
+
+  "ghee": {
+    "function": "FAT",
+    "category": "FAT_AND_OIL",
+    "subcategory": "DAIRY_FAT",
+    "description": "Clarified butter used in Indian cooking.",
+    "used_in": ["INDIAN_CUISINE", "SNACKS", "SWEETS"],
+    "aliases": ["clarified butter"]
+  },
+
+  "paneer": {
+    "function": "PROTEIN",
+    "category": "DAIRY",
+    "subcategory": "CHEESE",
+    "description": "Fresh Indian cottage cheese.",
+    "used_in": ["INDIAN_CUISINE", "SNACKS", "CURRIES"],
+    "aliases": ["cottage cheese"]
+  },
+
+  "besan": {
+    "function": "FLOUR",
+    "category": "GRAIN_BASED",
+    "subcategory": "PULSE_FLOUR",
+    "description": "Chickpea flour used in Indian cooking.",
+    "used_in": ["INDIAN_CUISINE", "SNACKS", "SWEETS"],
+    "aliases": ["gram flour", "chickpea flour"]
+  },
+
+  "atta": {
+    "function": "FLOUR",
+    "category": "GRAIN_BASED",
+    "subcategory": "WHEAT_FLOUR",
+    "description": "Whole wheat flour for Indian breads.",
+    "used_in": ["INDIAN_BREADS", "ROTI", "CHAPATI"],
+    "aliases": ["whole wheat flour"]
+  },
+
+  "maida": {
+    "function": "FLOUR",
+    "category": "GRAIN_BASED",
+    "subcategory": "REFINED_FLOUR",
+    "description": "Refined wheat flour.",
+    "used_in": ["BAKERY", "SNACKS", "INDIAN_BREADS"],
+    "aliases": ["refined wheat flour", "all purpose flour"]
+  },
+
+  "hing": {
+    "function": "SPICE",
+    "category": "FLAVORING",
+    "subcategory": "SPICE",
+    "description": "Asafoetida used in Indian cooking.",
+    "used_in": ["INDIAN_CUISINE", "DALS", "VEGETABLES"],
+    "aliases": ["asafoetida", "hing powder"]
+  },
+
+  "jeera": {
+    "function": "SPICE",
+    "category": "FLAVORING",
+    "subcategory": "SPICE",
+    "description": "Cumin seeds for Indian cooking.",
+    "used_in": ["INDIAN_CUISINE", "MASALAS", "RICE"],
+    "aliases": ["cumin", "cumin seeds"]
+  },
+
+  "haldi": {
+    "function": "SPICE",
+    "category": "FLAVORING",
+    "subcategory": "SPICE",
+    "description": "Turmeric root powder.",
+    "used_in": ["INDIAN_CUISINE", "MASALAS", "CURRIES"],
+    "aliases": ["turmeric", "turmeric powder"]
+  },
+
+  "mirch": {
+    "function": "SPICE",
+    "category": "FLAVORING",
+    "subcategory": "SPICE",
+    "description": "Chilli pepper powder.",
+    "used_in": ["INDIAN_CUISINE", "MASALAS", "CURRIES"],
+    "aliases": ["chilli powder", "red chilli powder"]
+  },
+
+  "elaichi": {
+    "function": "SPICE",
+    "category": "FLAVORING",
+    "subcategory": "SPICE",
+    "description": "Cardamom spice.",
+    "used_in": ["INDIAN_CUISINE", "MASALAS", "SWEETS", "TEA"],
+    "aliases": ["cardamom", "cardamom powder"]
+  },
+
+  "dalchini": {
+    "function": "SPICE",
+    "category": "FLAVORING",
+    "subcategory": "SPICE",
+    "description": "Cinnamon bark.",
+    "used_in": ["INDIAN_CUISINE", "MASALAS", "SWEETS"],
+    "aliases": ["cinnamon", "cinnamon powder"]
+  },
+
+  "methi": {
+    "function": "SPICE",
+    "category": "FLAVORING",
+    "subcategory": "SPICE",
+    "description": "Fenugreek seeds and leaves.",
+    "used_in": ["INDIAN_CUISINE", "MASALAS", "VEGETABLES"],
+    "aliases": ["fenugreek", "fenugreek seeds"]
+  },
+
+  "tamarind": {
+    "function": "ACIDULANT",
+    "category": "FLAVORING",
+    "subcategory": "FRUIT_BASED",
+    "description": "Tamarind pulp for sour taste.",
+    "used_in": ["INDIAN_CUISINE", "CHUTNEYS", "RICE"],
+    "aliases": ["imli", "tamarind paste"]
+  },
+
+  "coconut milk": {
+    "function": "LIQUID_BASE",
+    "category": "PLANT_BASED",
+    "subcategory": "MILK_ALTERNATIVE",
+    "description": "Liquid extracted from coconut meat.",
+    "used_in": ["INDIAN_CUISINE", "CURRIES", "DESSERTS"],
+    "aliases": ["nariyal ka doodh", "coconut cream"]
+  },
+
+  "disodium guanylate": {
+    "function": "FLAVOR_ENHANCER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "UMAMI_ENHANCER",
+    "description": "Enhances savory flavors.",
+    "used_in": ["SNACKS", "NOODLES", "SEASONINGS"],
+    "aliases": ["e627", "ins 627"]
+  },
+
+  "disodium inosinate": {
+    "function": "FLAVOR_ENHANCER",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "UMAMI_ENHANCER",
+    "description": "Enhances savory flavors.",
+    "used_in": ["SNACKS", "NOODLES", "SEASONINGS"],
+    "aliases": ["e631", "ins 631"]
+  },
+
+  "yeast extract": {
+    "function": "FLAVOR_ENHANCER",
+    "category": "FLAVORING",
+    "subcategory": "NATURAL_FLAVOR",
+    "description": "Adds savory umami flavor.",
+    "used_in": ["SNACKS", "SOUPS", "SEASONINGS"],
+    "aliases": []
+  },
+
+  "silicon dioxide": {
+    "function": "ANTI_CAKING",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "TEXTURE_MODIFIER",
+    "description": "Prevents clumping in powders.",
+    "used_in": ["SPICES", "POWDERS", "SALT"],
+    "aliases": ["silica", "e551"]
+  },
+
+  "magnesium stearate": {
+    "function": "ANTI_CAKING",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "LUBRICANT",
+    "description": "Prevents sticking in processing.",
+    "used_in": ["SUPPLEMENTS", "POWDERS"],
+    "aliases": ["e572"]
+  },
+
+  "lactic acid": {
+    "function": "ACIDITY_REGULATOR",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "FOOD_ACID",
+    "description": "Controls acidity and acts as preservative.",
+    "used_in": ["BEVERAGES", "DAIRY", "BAKERY"],
+    "aliases": ["e270", "ins 270"]
+  },
+
+  "phosphoric acid": {
+    "function": "ACIDITY_REGULATOR",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "FOOD_ACID",
+    "description": "Provides tangy flavor in sodas.",
+    "used_in": ["SOFT_DRINKS", "BEVERAGES"],
+    "aliases": ["e338", "ins 338"]
+  },
+
+  "sodium bicarbonate": {
+    "function": "LEAVENING_AGENT",
+    "category": "FOOD_ADDITIVE",
+    "subcategory": "RAISING_AGENT",
+    "description": "Helps baked goods rise.",
+    "used_in": ["BAKERY", "CAKES", "BREADS"],
+    "aliases": ["baking soda", "e500"]
+  },
+
+  "gelatin": {
+    "function": "GELLING_AGENT",
+    "category": "PROTEIN",
+    "subcategory": "ANIMAL_DERIVED",
+    "description": "Animal-derived gelling agent.",
+    "used_in": ["DESSERTS", "CANDY", "PHARMACEUTICALS"],
+    "aliases": ["e441", "gelatine"]
+  },
+
+  "milk solids": {
+    "function": "DAIRY_INGREDIENT",
+    "category": "DAIRY",
+    "subcategory": "MILK_POWDER",
+    "description": "Powdered milk for texture and flavor.",
+    "used_in": ["CHOCOLATE", "BAKERY", "CONFECTIONERY"],
+    "aliases": ["skim milk powder", "whole milk powder"]
+  },
+
+  "whey": {
+    "function": "PROTEIN",
+    "category": "DAIRY",
+    "subcategory": "MILK_PROTEIN",
+    "description": "Milk protein byproduct.",
+    "used_in": ["PROTEIN_SUPPLEMENTS", "BAKERY", "DAIRY"],
+    "aliases": ["whey protein", "whey powder"]
+  },
+
+  "casein": {
+    "function": "PROTEIN",
+    "category": "DAIRY",
+    "subcategory": "MILK_PROTEIN",
+    "description": "Milk protein used as binder.",
+    "used_in": ["CHEESE", "PROTEIN_SUPPLEMENTS", "BAKERY"],
+    "aliases": ["caseinate", "sodium caseinate"]
+  }
+}

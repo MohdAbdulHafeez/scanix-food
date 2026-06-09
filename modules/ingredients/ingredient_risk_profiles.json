@@ -1,0 +1,320 @@
+{
+  "sugar": {
+    "risk_level": "HIGH",
+    "risk_score": 90,
+    "risk_domains": ["OBESITY", "DIABETES", "METABOLIC_SYNDROME"],
+    "population_risk": ["DIABETICS", "PREDIABETICS", "OBESE_USERS"],
+    "evidence_level": "HIGH",
+    "safe_frequency": "LIMIT",
+    "digital_twin_weight": 0.90,
+    "explanation": "Excess intake contributes to obesity, diabetes and metabolic dysfunction."
+  },
+
+  "high fructose corn syrup": {
+    "risk_level": "HIGH",
+    "risk_score": 88,
+    "risk_domains": ["OBESITY", "LIVER_HEALTH", "INSULIN_RESPONSE"],
+    "population_risk": ["DIABETICS", "OBESE_USERS"],
+    "evidence_level": "HIGH",
+    "safe_frequency": "LIMIT",
+    "digital_twin_weight": 0.88,
+    "explanation": "Associated with excessive caloric intake and metabolic stress."
+  },
+
+  "maltodextrin": {
+    "risk_level": "HIGH",
+    "risk_score": 82,
+    "risk_domains": ["GLUCOSE_SPIKE", "INSULIN_RESPONSE", "METABOLIC_HEALTH"],
+    "population_risk": ["DIABETICS", "PREDIABETICS"],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "OCCASIONAL",
+    "digital_twin_weight": 0.82,
+    "explanation": "Rapidly absorbed carbohydrate with high glycemic impact."
+  },
+
+  "palm oil": {
+    "risk_level": "MODERATE",
+    "risk_score": 60,
+    "risk_domains": ["CARDIOVASCULAR"],
+    "population_risk": ["HEART_PATIENTS"],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "MODERATE",
+    "digital_twin_weight": 0.60,
+    "explanation": "Contains significant saturated fat."
+  },
+
+  "msg": {
+    "risk_level": "LOW",
+    "risk_score": 25,
+    "risk_domains": [],
+    "population_risk": [],
+    "evidence_level": "LOW",
+    "safe_frequency": "SAFE",
+    "digital_twin_weight": 0.25,
+    "explanation": "Generally recognized as safe within approved limits."
+  },
+
+  "sodium benzoate": {
+    "risk_level": "MODERATE",
+    "risk_score": 45,
+    "risk_domains": ["ADDITIVE_EXPOSURE"],
+    "population_risk": ["CHILDREN"],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "MODERATE",
+    "digital_twin_weight": 0.45,
+    "explanation": "Approved preservative; cumulative additive exposure should be considered."
+  },
+
+  "potassium sorbate": {
+    "risk_level": "LOW",
+    "risk_score": 20,
+    "risk_domains": [],
+    "population_risk": [],
+    "evidence_level": "LOW",
+    "safe_frequency": "SAFE",
+    "digital_twin_weight": 0.20,
+    "explanation": "Widely used preservative with low risk profile."
+  },
+
+  "soy lecithin": {
+    "risk_level": "LOW",
+    "risk_score": 10,
+    "risk_domains": [],
+    "population_risk": ["SOY_ALLERGY"],
+    "evidence_level": "LOW",
+    "safe_frequency": "SAFE",
+    "digital_twin_weight": 0.10,
+    "explanation": "Common emulsifier with low health concern."
+  },
+
+  "guar gum": {
+    "risk_level": "LOW",
+    "risk_score": 15,
+    "risk_domains": ["DIGESTIVE_SENSITIVITY"],
+    "population_risk": [],
+    "evidence_level": "LOW",
+    "safe_frequency": "SAFE",
+    "digital_twin_weight": 0.15,
+    "explanation": "Generally safe fiber-based thickener."
+  },
+
+  "xanthan gum": {
+    "risk_level": "LOW",
+    "risk_score": 15,
+    "risk_domains": ["DIGESTIVE_SENSITIVITY"],
+    "population_risk": [],
+    "evidence_level": "LOW",
+    "safe_frequency": "SAFE",
+    "digital_twin_weight": 0.15,
+    "explanation": "Widely used stabilizer with low risk profile."
+  },
+
+  "sucralose": {
+    "risk_level": "MODERATE",
+    "risk_score": 40,
+    "risk_domains": ["GUT_MICROBIOME"],
+    "population_risk": [],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "MODERATE",
+    "digital_twin_weight": 0.40,
+    "explanation": "Research suggests possible microbiome effects in some individuals."
+  },
+
+  "aspartame": {
+    "risk_level": "MODERATE",
+    "risk_score": 42,
+    "risk_domains": ["ARTIFICIAL_SWEETENER_EXPOSURE"],
+    "population_risk": ["PKU_PATIENTS"],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "MODERATE",
+    "digital_twin_weight": 0.42,
+    "explanation": "Approved sweetener with population-specific considerations."
+  },
+
+  "vanaspati": {
+    "risk_level": "HIGH",
+    "risk_score": 85,
+    "risk_domains": ["CARDIOVASCULAR", "TRANS_FAT"],
+    "population_risk": ["HEART_PATIENTS", "CHOLESTEROL_HIGH"],
+    "evidence_level": "HIGH",
+    "safe_frequency": "AVOID",
+    "digital_twin_weight": 0.85,
+    "explanation": "Contains trans fats; increases bad cholesterol and heart disease risk."
+  },
+
+  "dalda": {
+    "risk_level": "HIGH",
+    "risk_score": 85,
+    "risk_domains": ["CARDIOVASCULAR", "TRANS_FAT"],
+    "population_risk": ["HEART_PATIENTS", "CHOLESTEROL_HIGH"],
+    "evidence_level": "HIGH",
+    "safe_frequency": "AVOID",
+    "digital_twin_weight": 0.85,
+    "explanation": "Hydrogenated fat containing trans fats."
+  },
+
+  "hydrogenated vegetable oil": {
+    "risk_level": "HIGH",
+    "risk_score": 85,
+    "risk_domains": ["CARDIOVASCULAR", "TRANS_FAT"],
+    "population_risk": ["HEART_PATIENTS"],
+    "evidence_level": "HIGH",
+    "safe_frequency": "AVOID",
+    "digital_twin_weight": 0.85,
+    "explanation": "Primary source of industrial trans fats."
+  },
+
+  "partially hydrogenated oil": {
+    "risk_level": "HIGH",
+    "risk_score": 85,
+    "risk_domains": ["CARDIOVASCULAR", "TRANS_FAT"],
+    "population_risk": ["HEART_PATIENTS"],
+    "evidence_level": "HIGH",
+    "safe_frequency": "AVOID",
+    "digital_twin_weight": 0.85,
+    "explanation": "Contains trans fats; linked to heart disease."
+  },
+
+  "trans fat": {
+    "risk_level": "CRITICAL",
+    "risk_score": 95,
+    "risk_domains": ["CARDIOVASCULAR", "TRANS_FAT"],
+    "population_risk": ["HEART_PATIENTS"],
+    "evidence_level": "HIGH",
+    "safe_frequency": "AVOID",
+    "digital_twin_weight": 0.95,
+    "explanation": "No safe level; increases heart disease risk significantly."
+  },
+
+  "tartrazine": {
+    "risk_level": "MODERATE",
+    "risk_score": 55,
+    "risk_domains": ["HYPERACTIVITY", "ALLERGIC_REACTION"],
+    "population_risk": ["CHILDREN", "ASTHMA_PATIENTS"],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "OCCASIONAL",
+    "digital_twin_weight": 0.55,
+    "explanation": "May cause hyperactivity in sensitive children and allergic reactions."
+  },
+
+  "sunset yellow": {
+    "risk_level": "MODERATE",
+    "risk_score": 50,
+    "risk_domains": ["HYPERACTIVITY"],
+    "population_risk": ["CHILDREN"],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "OCCASIONAL",
+    "digital_twin_weight": 0.50,
+    "explanation": "Linked to hyperactivity in children."
+  },
+
+  "allura red": {
+    "risk_level": "MODERATE",
+    "risk_score": 48,
+    "risk_domains": ["HYPERACTIVITY"],
+    "population_risk": ["CHILDREN"],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "OCCASIONAL",
+    "digital_twin_weight": 0.48,
+    "explanation": "May contribute to hyperactivity in sensitive individuals."
+  },
+
+  "carrageenan": {
+    "risk_level": "MODERATE",
+    "risk_score": 45,
+    "risk_domains": ["DIGESTIVE_HEALTH", "INFLAMMATION"],
+    "population_risk": ["IBD_PATIENTS"],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "OCCASIONAL",
+    "digital_twin_weight": 0.45,
+    "explanation": "May cause digestive inflammation in sensitive individuals."
+  },
+
+  "datem": {
+    "risk_level": "MODERATE",
+    "risk_score": 40,
+    "risk_domains": ["ADDITIVE_EXPOSURE"],
+    "population_risk": [],
+    "evidence_level": "LOW",
+    "safe_frequency": "MODERATE",
+    "digital_twin_weight": 0.40,
+    "explanation": "Emulsifier with limited safety data; found in processed breads."
+  },
+
+  "polysorbate 80": {
+    "risk_level": "MODERATE",
+    "risk_score": 48,
+    "risk_domains": ["GUT_HEALTH", "INFLAMMATION"],
+    "population_risk": ["IBD_PATIENTS"],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "OCCASIONAL",
+    "digital_twin_weight": 0.48,
+    "explanation": "May promote gut inflammation and metabolic dysfunction."
+  },
+
+  "bha": {
+    "risk_level": "MODERATE",
+    "risk_score": 55,
+    "risk_domains": ["CARCINOGENIC_CONCERN"],
+    "population_risk": [],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "OCCASIONAL",
+    "digital_twin_weight": 0.55,
+    "explanation": "Possible endocrine disruptor; classified as possible carcinogen."
+  },
+
+  "bht": {
+    "risk_level": "MODERATE",
+    "risk_score": 52,
+    "risk_domains": ["ENDOCRINE_DISRUPTION"],
+    "population_risk": [],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "OCCASIONAL",
+    "digital_twin_weight": 0.52,
+    "explanation": "May affect thyroid function and hormone balance."
+  },
+
+  "sodium nitrite": {
+    "risk_level": "HIGH",
+    "risk_score": 70,
+    "risk_domains": ["CARCINOGENIC_CONCERN"],
+    "population_risk": [],
+    "evidence_level": "HIGH",
+    "safe_frequency": "LIMIT",
+    "digital_twin_weight": 0.70,
+    "explanation": "Forms nitrosamines; linked to certain cancers."
+  },
+
+  "calcium propionate": {
+    "risk_level": "LOW",
+    "risk_score": 25,
+    "risk_domains": ["BEHAVIORAL"],
+    "population_risk": ["CHILDREN"],
+    "evidence_level": "LOW",
+    "safe_frequency": "MODERATE",
+    "digital_twin_weight": 0.25,
+    "explanation": "May cause mild irritability in sensitive children."
+  },
+
+  "ghee": {
+    "risk_level": "MODERATE",
+    "risk_score": 45,
+    "risk_domains": ["CARDIOVASCULAR", "SATURATED_FAT"],
+    "population_risk": ["HEART_PATIENTS", "CHOLESTEROL_HIGH"],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "MODERATE",
+    "digital_twin_weight": 0.45,
+    "explanation": "High in saturated fat; moderate consumption recommended."
+  },
+
+  "maida": {
+    "risk_level": "MODERATE",
+    "risk_score": 55,
+    "risk_domains": ["GLYCEMIC_IMPACT", "REFINED_CARB"],
+    "population_risk": ["DIABETICS"],
+    "evidence_level": "MODERATE",
+    "safe_frequency": "OCCASIONAL",
+    "digital_twin_weight": 0.55,
+    "explanation": "Refined flour with high glycemic index; low in nutrients."
+  }
+}

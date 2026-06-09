@@ -1,0 +1,1359 @@
+{
+  "metadata": {
+    "title": "FSSAI Comprehensive Compliance Rules Database",
+    "version": "3.1.0",
+    "last_updated": "2025-01-01",
+    "governing_body": "Food Safety and Standards Authority of India",
+    "primary_regulation": "Food Safety and Standards Act, 2006",
+    "regulations_covered": [
+      "FSS (Labelling and Display) Regulations 2020",
+      "FSS (Food Products Standards and Food Additives) Regulations 2011",
+      "FSS (Contaminants, Toxins and Residues) Regulations 2011",
+      "FSS (Health Supplements, Nutraceuticals) Regulations 2022",
+      "FSS (Prohibition and Restriction on Sales) Regulations 2011",
+      "FSSAI Draft Front of Pack Labelling (FOPL) Regulations 2023",
+      "FSS (Packaging and Labelling) Regulations 2011",
+      "FSS (Import) Regulations 2017",
+      "FSSAI Food Fortification Regulations 2018",
+      "FSSAI Trans Fat Regulations 2022"
+    ],
+    "jurisdiction": "India",
+    "enforcement_authority": "FSSAI + State Food Safety Departments",
+    "penalty_framework": "FSS Act 2006, Chapter IX — penalties up to INR 10 lakh + imprisonment"
+  },
+
+  "reference_daily_values": {
+    "basis": "ICMR NIN Recommended Dietary Allowances 2020",
+    "reference_population": "Sedentary adult, 60kg body weight",
+    "daily_values": {
+      "energy_kcal": 2000,
+      "protein_g": 54,
+      "total_fat_g": 60,
+      "saturated_fat_g": 20,
+      "trans_fat_g": 2,
+      "carbohydrate_g": 300,
+      "total_sugar_g": 25,
+      "added_sugar_g": 25,
+      "dietary_fibre_g": 40,
+      "sodium_mg": 2000,
+      "potassium_mg": 3500,
+      "calcium_mg": 600,
+      "iron_mg": 17,
+      "vitamin_a_mcg": 600,
+      "vitamin_c_mg": 40,
+      "vitamin_d_mcg": 10,
+      "vitamin_b12_mcg": 1,
+      "folate_mcg": 200,
+      "zinc_mg": 12,
+      "iodine_mcg": 150,
+      "magnesium_mg": 340,
+      "phosphorus_mg": 600,
+      "selenium_mcg": 40
+    },
+    "child_daily_values_4_8_years": {
+      "energy_kcal": 1400,
+      "protein_g": 20,
+      "total_fat_g": 45,
+      "sodium_mg": 1200,
+      "total_sugar_g": 15,
+      "dietary_fibre_g": 20
+    },
+    "child_daily_values_9_13_years": {
+      "energy_kcal": 1600,
+      "protein_g": 35,
+      "total_fat_g": 52,
+      "sodium_mg": 1500,
+      "total_sugar_g": 20,
+      "dietary_fibre_g": 25
+    }
+  },
+
+  "nutrient_content_claims": {
+
+    "energy": {
+      "claim_id": "NC-E-001",
+      "regulation": "FSS (Labelling) Regulations 2020, Schedule II, Part A",
+      "low_energy": {
+        "claim_name": "Low Calorie",
+        "aliases": ["low calorie", "low energy", "reduced calorie", "lite calories"],
+        "condition": "per_100g",
+        "threshold": 40,
+        "unit": "kcal",
+        "operator": "<=",
+        "per_serving_threshold": 40,
+        "note": "For liquids: <= 20 kcal per 100ml",
+        "liquid_threshold": 20,
+        "liquid_unit": "kcal",
+        "liquid_per": "per_100ml",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "HIGH"
+      },
+      "calorie_free": {
+        "claim_name": "Calorie Free",
+        "aliases": ["calorie free", "zero calories", "no calories", "energy free"],
+        "condition": "per_100g",
+        "threshold": 4,
+        "unit": "kcal",
+        "operator": "<=",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "CRITICAL"
+      },
+      "reduced_energy": {
+        "claim_name": "Reduced Calorie",
+        "aliases": ["reduced calorie", "fewer calories"],
+        "condition": "comparative",
+        "reduction_required_pct": 25,
+        "reference": "standard product of same category",
+        "violation_class": "COMPARATIVE_CLAIM_VIOLATION",
+        "severity": "MEDIUM"
+      }
+    },
+
+    "fat": {
+      "claim_id": "NC-F-001",
+      "regulation": "FSS (Labelling) Regulations 2020, Schedule II, Part B",
+      "fat_free": {
+        "claim_name": "Fat Free",
+        "aliases": ["fat free", "zero fat", "no fat", "0% fat", "without fat"],
+        "condition": "per_100g",
+        "nutrient": "fat",
+        "threshold": 0.5,
+        "unit": "g",
+        "operator": "<=",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "HIGH"
+      },
+      "low_fat": {
+        "claim_name": "Low Fat",
+        "aliases": ["low fat", "reduced fat", "light fat", "less fat"],
+        "condition": "per_100g",
+        "nutrient": "fat",
+        "threshold": 3.0,
+        "unit": "g",
+        "operator": "<=",
+        "liquid_threshold": 1.5,
+        "liquid_unit": "g",
+        "liquid_per": "per_100ml",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "HIGH"
+      },
+      "reduced_fat": {
+        "claim_name": "Reduced Fat",
+        "aliases": ["reduced fat", "25% less fat", "lower fat"],
+        "condition": "comparative",
+        "reduction_required_pct": 25,
+        "reference": "standard product",
+        "violation_class": "COMPARATIVE_CLAIM_VIOLATION",
+        "severity": "MEDIUM"
+      },
+      "saturated_fat_free": {
+        "claim_name": "Saturated Fat Free",
+        "aliases": ["saturated fat free", "no saturated fat", "zero saturated fat"],
+        "condition": "per_100g",
+        "nutrient": "saturated_fat",
+        "threshold": 0.1,
+        "unit": "g",
+        "operator": "<=",
+        "trans_fat_condition": "trans_fat <= 0.1g per 100g",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "HIGH"
+      },
+      "low_saturated_fat": {
+        "claim_name": "Low Saturated Fat",
+        "aliases": ["low saturated fat", "low sat fat", "low in saturated fat"],
+        "condition": "per_100g",
+        "nutrient": "saturated_fat",
+        "threshold": 1.5,
+        "unit": "g",
+        "operator": "<=",
+        "energy_from_sat_fat_pct_max": 10,
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "HIGH"
+      },
+      "trans_fat_free": {
+        "claim_name": "Trans Fat Free",
+        "aliases": ["trans fat free", "zero trans fat", "no trans fat", "0g trans fat"],
+        "condition": "per_100g",
+        "nutrient": "trans_fat",
+        "threshold": 0.2,
+        "unit": "g",
+        "operator": "<=",
+        "regulatory_limit_note": "FSSAI Trans Fat Regulations 2022: max 2% trans fat in edible oils from Jan 2022",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "CRITICAL",
+        "who_guidance": "WHO recommends elimination of industrial trans fats globally by 2023"
+      },
+      "cholesterol_free": {
+        "claim_name": "Cholesterol Free",
+        "aliases": ["cholesterol free", "no cholesterol", "zero cholesterol"],
+        "condition": "per_100g",
+        "nutrient": "cholesterol",
+        "threshold": 5,
+        "unit": "mg",
+        "operator": "<=",
+        "sat_fat_condition_max_g": 1.5,
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "MEDIUM"
+      },
+      "low_cholesterol": {
+        "claim_name": "Low Cholesterol",
+        "aliases": ["low cholesterol", "low in cholesterol"],
+        "condition": "per_100g",
+        "nutrient": "cholesterol",
+        "threshold": 20,
+        "unit": "mg",
+        "operator": "<=",
+        "sat_fat_condition_max_g": 1.5,
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "MEDIUM"
+      }
+    },
+
+    "protein": {
+      "claim_id": "NC-P-001",
+      "regulation": "FSS (Labelling) Regulations 2020, Schedule II, Part C",
+      "high_protein": {
+        "claim_name": "High Protein",
+        "aliases": ["high protein", "excellent source of protein", "rich in protein", "protein rich", "full of protein", "packed with protein"],
+        "condition": "per_100g",
+        "nutrient": "protein",
+        "threshold": 10,
+        "unit": "g",
+        "operator": ">=",
+        "energy_from_protein_pct_min": 20,
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "HIGH",
+        "note": "Energy from protein must be >= 20% of total energy"
+      },
+      "source_of_protein": {
+        "claim_name": "Good Source of Protein",
+        "aliases": ["good source of protein", "source of protein", "contains protein", "protein source", "with protein"],
+        "condition": "per_100g",
+        "nutrient": "protein",
+        "threshold": 5,
+        "unit": "g",
+        "operator": ">=",
+        "energy_from_protein_pct_min": 10,
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "MEDIUM"
+      }
+    },
+
+    "sugar": {
+      "claim_id": "NC-S-001",
+      "regulation": "FSS (Labelling) Regulations 2020, Schedule II, Part D; Clause 2.2.4",
+      "sugar_free": {
+        "claim_name": "Sugar Free",
+        "aliases": ["sugar free", "no sugar", "zero sugar", "0g sugar", "without sugar", "sugarless", "free from sugar"],
+        "condition": "per_100g",
+        "nutrient": "sugar",
+        "threshold": 0.5,
+        "unit": "g",
+        "operator": "<=",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "CRITICAL"
+      },
+      "low_sugar": {
+        "claim_name": "Low Sugar",
+        "aliases": ["low sugar", "low in sugar", "reduced sugar", "less sugar"],
+        "condition": "per_100g",
+        "nutrient": "sugar",
+        "threshold": 5.0,
+        "unit": "g",
+        "operator": "<=",
+        "liquid_threshold": 2.5,
+        "liquid_per": "per_100ml",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "HIGH"
+      },
+      "no_added_sugar": {
+        "claim_name": "No Added Sugar",
+        "aliases": [
+          "no added sugar", "no added sugars", "without added sugar",
+          "unsweetened", "no added sweeteners", "free from added sugars",
+          "contains no added sugar", "zero added sugar"
+        ],
+        "condition": "ingredient_based",
+        "nutrient": "added_sugar_aliases",
+        "threshold": 0,
+        "operator": "==",
+        "requires_no_aliases": true,
+        "sugar_aliases": [
+          "sugar", "brown sugar", "cane sugar", "coconut sugar", "palm sugar",
+          "raw sugar", "turbinado sugar", "muscovado sugar", "demerara sugar",
+          "dextrose", "glucose", "fructose", "galactose", "lactose", "maltose",
+          "sucrose", "trehalose", "xylose",
+          "corn syrup", "corn syrup solids", "high fructose corn syrup",
+          "brown rice syrup", "rice syrup", "malt syrup", "barley malt syrup",
+          "maple syrup", "agave", "agave syrup", "agave nectar",
+          "honey", "molasses", "blackstrap molasses",
+          "fruit juice concentrate", "apple juice concentrate",
+          "grape juice concentrate", "pear juice concentrate",
+          "date syrup", "date sugar", "coconut nectar",
+          "jaggery", "gur", "khandsari sugar", "mishri",
+          "maltodextrin", "dextrin", "modified starch",
+          "invert sugar", "golden syrup", "treacle",
+          "sorbitol", "xylitol", "erythritol", "mannitol",
+          "isomalt", "maltitol", "lactitol", "hydrogenated starch hydrolysates"
+        ],
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "CRITICAL",
+        "clause": "FSS Regulations 2020, Clause 2.2.4",
+        "note": "Product must not contain any ingredient that is a sugar or is derived from sugars, including sugar alcohols"
+      },
+      "reduced_sugar": {
+        "claim_name": "Reduced Sugar",
+        "aliases": ["reduced sugar", "25% less sugar", "lower sugar"],
+        "condition": "comparative",
+        "reduction_required_pct": 25,
+        "violation_class": "COMPARATIVE_CLAIM_VIOLATION",
+        "severity": "MEDIUM"
+      }
+    },
+
+    "sodium": {
+      "claim_id": "NC-NA-001",
+      "regulation": "FSS (Labelling) Regulations 2020, Schedule II, Part E",
+      "sodium_free": {
+        "claim_name": "Sodium Free",
+        "aliases": ["sodium free", "no sodium", "zero sodium", "salt free", "no salt", "without sodium"],
+        "condition": "per_100g",
+        "nutrient": "sodium",
+        "threshold": 5,
+        "unit": "mg",
+        "operator": "<=",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "HIGH"
+      },
+      "very_low_sodium": {
+        "claim_name": "Very Low Sodium",
+        "aliases": ["very low sodium", "very low salt"],
+        "condition": "per_100g",
+        "nutrient": "sodium",
+        "threshold": 40,
+        "unit": "mg",
+        "operator": "<=",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "HIGH"
+      },
+      "low_sodium": {
+        "claim_name": "Low Sodium",
+        "aliases": ["low sodium", "low salt", "low in sodium", "reduced sodium", "less sodium"],
+        "condition": "per_100g",
+        "nutrient": "sodium",
+        "threshold": 120,
+        "unit": "mg",
+        "operator": "<=",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "HIGH"
+      },
+      "reduced_sodium": {
+        "claim_name": "Reduced Sodium",
+        "aliases": ["reduced sodium", "25% less sodium", "lower sodium"],
+        "condition": "comparative",
+        "reduction_required_pct": 25,
+        "violation_class": "COMPARATIVE_CLAIM_VIOLATION",
+        "severity": "MEDIUM"
+      },
+      "no_added_salt": {
+        "claim_name": "No Added Salt",
+        "aliases": ["no added salt", "without added salt", "unsalted"],
+        "condition": "ingredient_based",
+        "prohibited_ingredients": ["salt", "sodium chloride", "sea salt", "rock salt", "himalayan pink salt"],
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "HIGH"
+      }
+    },
+
+    "fibre": {
+      "claim_id": "NC-FB-001",
+      "regulation": "FSS (Labelling) Regulations 2020, Schedule II, Part F",
+      "high_fibre": {
+        "claim_name": "High Fibre",
+        "aliases": ["high fibre", "high fiber", "rich in fibre", "excellent source of fibre", "high in dietary fibre"],
+        "condition": "per_100g",
+        "nutrient": "fibre",
+        "threshold": 6,
+        "unit": "g",
+        "operator": ">=",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "HIGH"
+      },
+      "source_of_fibre": {
+        "claim_name": "Source of Fibre",
+        "aliases": ["source of fibre", "source of fiber", "good source of fibre", "contains fibre", "with added fibre"],
+        "condition": "per_100g",
+        "nutrient": "fibre",
+        "threshold": 3,
+        "unit": "g",
+        "operator": ">=",
+        "violation_class": "LABEL_DECEPTION",
+        "severity": "MEDIUM"
+      }
+    },
+
+    "vitamins_and_minerals": {
+      "claim_id": "NC-VM-001",
+      "regulation": "FSS (Labelling) Regulations 2020, Schedule II, Part G",
+      "general_rule": "A product can claim 'source of [vitamin/mineral]' if it provides >= 15% of RDV per 100g. 'High in [vitamin/mineral]' requires >= 30% of RDV per 100g.",
+      "source_threshold_pct_rdv": 15,
+      "high_threshold_pct_rdv": 30,
+      "vitamins": {
+        "vitamin_a": {
+          "claim_name": "Source of Vitamin A",
+          "rdv_mcg": 600,
+          "source_threshold_mcg": 90,
+          "high_threshold_mcg": 180,
+          "unit": "mcg",
+          "violation_class": "LABEL_DECEPTION"
+        },
+        "vitamin_c": {
+          "claim_name": "Source of Vitamin C",
+          "rdv_mg": 40,
+          "source_threshold_mg": 6,
+          "high_threshold_mg": 12,
+          "unit": "mg",
+          "violation_class": "LABEL_DECEPTION"
+        },
+        "vitamin_d": {
+          "claim_name": "Source of Vitamin D",
+          "rdv_mcg": 10,
+          "source_threshold_mcg": 1.5,
+          "high_threshold_mcg": 3,
+          "unit": "mcg",
+          "violation_class": "LABEL_DECEPTION"
+        },
+        "vitamin_b12": {
+          "claim_name": "Source of Vitamin B12",
+          "rdv_mcg": 1,
+          "source_threshold_mcg": 0.15,
+          "high_threshold_mcg": 0.30,
+          "unit": "mcg",
+          "violation_class": "LABEL_DECEPTION"
+        }
+      },
+      "minerals": {
+        "calcium": {
+          "claim_name": "Source of Calcium",
+          "rdv_mg": 600,
+          "source_threshold_mg": 90,
+          "high_threshold_mg": 180,
+          "unit": "mg",
+          "violation_class": "LABEL_DECEPTION"
+        },
+        "iron": {
+          "claim_name": "Source of Iron",
+          "rdv_mg": 17,
+          "source_threshold_mg": 2.55,
+          "high_threshold_mg": 5.1,
+          "unit": "mg",
+          "violation_class": "LABEL_DECEPTION"
+        },
+        "zinc": {
+          "claim_name": "Source of Zinc",
+          "rdv_mg": 12,
+          "source_threshold_mg": 1.8,
+          "high_threshold_mg": 3.6,
+          "unit": "mg",
+          "violation_class": "LABEL_DECEPTION"
+        }
+      }
+    }
+  },
+
+  "ingredient_quality_claims": {
+    "claim_id": "IQC-001",
+    "regulation": "FSS (Labelling) Regulations 2020, Regulation 2.2",
+
+    "natural": {
+      "claim_name": "Natural",
+      "aliases": ["natural", "all natural", "100% natural", "naturally made", "made from natural ingredients", "pure natural"],
+      "condition": "ingredient_based",
+      "disqualifying_ingredients_pattern": "e_number_or_ins_code",
+      "prohibited_additive_codes": [
+        "E102", "E104", "E110", "E120", "E122", "E123", "E124", "E127",
+        "E128", "E129", "E131", "E132", "E133", "E142", "E151", "E155",
+        "E160b", "E180", "E211", "E212", "E213", "E214", "E215", "E216",
+        "E217", "E218", "E219", "E249", "E250", "E251", "E252",
+        "E320", "E321", "E951", "E952", "E954"
+      ],
+      "prohibited_ins_codes": [
+        "INS 102", "INS 104", "INS 110", "INS 120", "INS 122", "INS 123",
+        "INS 124", "INS 127", "INS 129", "INS 211", "INS 212", "INS 213",
+        "INS 249", "INS 250", "INS 251", "INS 252", "INS 320", "INS 321",
+        "INS 951", "INS 954"
+      ],
+      "also_prohibited": [
+        "artificial flavour", "artificial color", "artificial colour",
+        "synthetic preservative", "artificial preservative", "bleached",
+        "hydrogenated", "partially hydrogenated"
+      ],
+      "violation_class": "INGREDIENT_CLAIM_VIOLATION",
+      "severity": "HIGH",
+      "clause": "FSSAI Regulations 2020, Regulation 2.2.2"
+    },
+
+    "organic": {
+      "claim_name": "Organic",
+      "aliases": ["organic", "certified organic", "100% organic", "made with organic ingredients"],
+      "condition": "certification_required",
+      "required_certification": ["NPOP", "PGS-India", "India Organic"],
+      "certifying_bodies": [
+        "APEDA", "National Programme for Organic Production (NPOP)",
+        "Participatory Guarantee System (PGS-India)"
+      ],
+      "verification": "UNVERIFIABLE_WITHOUT_CERT",
+      "violation_class": "CERTIFICATION_MISSING",
+      "severity": "HIGH",
+      "clause": "NPOP Standards under APEDA"
+    },
+
+    "multigrain": {
+      "claim_name": "Multigrain",
+      "aliases": ["multigrain", "multi grain", "multiple grains", "multi-grain"],
+      "condition": "ingredient_based",
+      "minimum_grains_required": 2,
+      "each_grain_min_pct": 0,
+      "note": "No FSSAI minimum % per grain — must genuinely contain multiple grain types",
+      "verification": "UNVERIFIABLE_WITHOUT_FULL_RECIPE",
+      "violation_class": "INGREDIENT_CLAIM_VIOLATION",
+      "severity": "MEDIUM"
+    },
+
+    "whole_grain": {
+      "claim_name": "Whole Grain",
+      "aliases": ["whole grain", "whole wheat", "wholegrain", "whole wheat flour", "100% whole grain", "made with whole grain"],
+      "condition": "ingredient_based",
+      "required_ingredient_pattern": "whole grain|whole wheat|wholegrain",
+      "note": "Must list whole grain as primary grain ingredient (first in list). Refined flour as primary disqualifies claim.",
+      "disqualifying_primary_ingredient": ["maida", "refined wheat flour", "all purpose flour", "refined flour"],
+      "verification": "PARTIALLY_VERIFIABLE",
+      "violation_class": "INGREDIENT_CLAIM_VIOLATION",
+      "severity": "HIGH"
+    },
+
+    "fresh": {
+      "claim_name": "Fresh",
+      "aliases": ["fresh", "freshly made", "farm fresh", "oven fresh"],
+      "condition": "processing_based",
+      "note": "Cannot be used on UHT, retort-processed, or ultra-processed products (NOVA 4)",
+      "prohibited_if_process": ["UHT", "retort", "spray dried", "freeze dried"],
+      "verification": "UNVERIFIABLE",
+      "violation_class": "INGREDIENT_CLAIM_VIOLATION",
+      "severity": "MEDIUM"
+    },
+
+    "pure": {
+      "claim_name": "Pure",
+      "aliases": ["pure", "100% pure", "purely natural"],
+      "condition": "ingredient_based",
+      "requires_single_ingredient": false,
+      "prohibits_additives": true,
+      "verification": "PARTIALLY_VERIFIABLE",
+      "violation_class": "INGREDIENT_CLAIM_VIOLATION",
+      "severity": "MEDIUM"
+    },
+
+    "homemade": {
+      "claim_name": "Homemade",
+      "aliases": ["homemade", "home made", "artisanal", "handcrafted", "hand-made", "crafted"],
+      "condition": "manufacturing_based",
+      "note": "Misleading if mass-manufactured. FSSAI prohibits misleading claims under Section 53",
+      "verification": "UNVERIFIABLE",
+      "violation_class": "MISLEADING_CLAIM",
+      "severity": "MEDIUM"
+    }
+  },
+
+  "health_claims": {
+    "claim_id": "HC-001",
+    "regulation": "FSS (Labelling) Regulations 2020, Schedule III",
+    "general_rule": "Health claims must be substantiated with scientific evidence. Generic health claims allowed only for established nutrient-function relationships.",
+
+    "heart_health": {
+      "claim_name": "Heart Healthy",
+      "aliases": ["heart healthy", "good for heart", "heart health", "supports heart health", "cholesterol friendly", "cardio friendly"],
+      "conditions": [
+        "saturated_fat <= 1.5g per 100g",
+        "trans_fat <= 0.1g per 100g",
+        "sodium <= 480mg per 100g",
+        "cholesterol <= 20mg per 100g"
+      ],
+      "disqualified_if": [
+        "trans_fat > 0.1g",
+        "sodium > 480mg",
+        "saturated_fat > 1.5g"
+      ],
+      "scientific_basis": "WHO cardiovascular disease prevention guidelines",
+      "violation_class": "HEALTH_CLAIM_VIOLATION",
+      "severity": "CRITICAL"
+    },
+
+    "digestive_health": {
+      "claim_name": "Good for Digestion",
+      "aliases": ["good for digestion", "aids digestion", "digestive health", "supports gut health", "gut friendly", "probiotic"],
+      "conditions": ["product contains probiotics or prebiotic fibres"],
+      "requires_cfu_declaration_for_probiotics": true,
+      "minimum_cfu": "1e8",
+      "verification": "REQUIRES_MICROBIOLOGICAL_TEST",
+      "violation_class": "HEALTH_CLAIM_VIOLATION",
+      "severity": "HIGH"
+    },
+
+    "bone_health": {
+      "claim_name": "Good for Bones",
+      "aliases": ["good for bones", "bone health", "supports strong bones", "strengthens bones", "for strong bones"],
+      "conditions": [
+        "calcium >= 240mg per 100g (30% RDV)",
+        "vitamin_d >= 2.5mcg per 100g (25% RDV)"
+      ],
+      "scientific_basis": "EFSA approved nutrient-function claim for calcium + bone maintenance",
+      "violation_class": "HEALTH_CLAIM_VIOLATION",
+      "severity": "MEDIUM"
+    },
+
+    "immunity": {
+      "claim_name": "Boosts Immunity",
+      "aliases": ["boosts immunity", "immunity booster", "strengthens immunity", "builds immunity", "immune support", "builds defense"],
+      "condition": "PROHIBITED_CLAIM",
+      "note": "FSSAI prohibits claims suggesting immunity boosting without specific approval. Permitted only for Zinc, Vitamin C, Vitamin D under strict conditions.",
+      "permitted_only_if": {
+        "vitamin_c": "source of vitamin C (>= 15% RDV)",
+        "vitamin_d": "source of vitamin D (>= 15% RDV)",
+        "zinc": "source of zinc (>= 15% RDV)"
+      },
+      "violation_class": "PROHIBITED_CLAIM_VIOLATION",
+      "severity": "CRITICAL"
+    },
+
+    "brain_health": {
+      "claim_name": "Brain Food",
+      "aliases": ["brain food", "good for brain", "brain health", "improves memory", "enhances concentration", "boosts brainpower", "smart food"],
+      "condition": "PROHIBITED_CLAIM",
+      "note": "Not an approved health claim under FSS regulations. Requires pre-approval from FSSAI.",
+      "violation_class": "PROHIBITED_CLAIM_VIOLATION",
+      "severity": "CRITICAL"
+    },
+
+    "energy_boost": {
+      "claim_name": "Energy Booster",
+      "aliases": ["energy booster", "gives energy", "energy drink", "boosts energy", "instant energy", "powers you up"],
+      "condition": "RESTRICTED_CLAIM",
+      "note": "Energy claims permitted for genuine high-carbohydrate/protein products. Cannot claim 'instant energy' for products with high GI sugars as a health benefit.",
+      "violation_class": "MISLEADING_CLAIM",
+      "severity": "HIGH"
+    },
+
+    "weight_management": {
+      "claim_name": "Helps Lose Weight",
+      "aliases": ["helps lose weight", "weight loss", "slimming", "fat burning", "reduces weight", "aids weight loss", "weight management"],
+      "condition": "PROHIBITED_CLAIM",
+      "note": "Not approved under FSS Act unless the product is specifically formulated and licensed as a food for special dietary use (FSDU) for weight management.",
+      "violation_class": "PROHIBITED_CLAIM_VIOLATION",
+      "severity": "CRITICAL"
+    },
+
+    "diabetes_management": {
+      "claim_name": "Diabetic Friendly",
+      "aliases": ["diabetic friendly", "suitable for diabetics", "good for diabetes", "controls blood sugar", "lowers blood sugar", "for diabetics"],
+      "condition": "RESTRICTED_CLAIM",
+      "requirements": [
+        "Must be approved as Food for Special Dietary Use (FSDU) under FSS (Health Supplements) Regulations 2022",
+        "OR must carry 'not a medical food' disclaimer",
+        "sugar <= 5g per 100g",
+        "glycemic index must be documented if claiming low GI"
+      ],
+      "violation_class": "HEALTH_CLAIM_VIOLATION",
+      "severity": "CRITICAL"
+    }
+  },
+
+  "front_of_pack_labelling": {
+    "claim_id": "FOPL-001",
+    "regulation": "FSSAI Draft Front of Pack Labelling Regulations 2023",
+    "status": "DRAFT — expected enforcement from 2025",
+
+    "high_fat_salt_sugar": {
+      "claim_name": "HFSS Classification",
+      "high_fat_threshold_per100g": 20,
+      "high_sugar_threshold_per100g": 10,
+      "high_salt_threshold_per100g_sodium_mg": 600,
+      "products_of_poor_nutritional_quality_pnq": {
+        "triggers_mandatory_warning": true,
+        "cannot_market_to_children": true,
+        "requires_fopl_star": true
+      }
+    },
+
+    "star_rating_system": {
+      "basis": "Nutrient profile scoring: positive scores (fibre, protein) minus negative scores (sugar, fat, sodium, energy)",
+      "stars_5": "Score >= 10 (healthiest)",
+      "stars_4": "Score 7-9",
+      "stars_3": "Score 4-6",
+      "stars_2": "Score 1-3",
+      "stars_1": "Score <= 0 (least healthy)"
+    }
+  },
+
+  "allergen_declarations": {
+    "claim_id": "AL-001",
+    "regulation": "FSS (Labelling and Display) Regulations 2020, Regulation 3",
+
+    "mandatory_allergens": {
+      "note": "All 8 major allergens MUST be declared on labels when present, even in small quantities",
+      "allergens": [
+        {
+          "id": "AL-001",
+          "name": "Gluten",
+          "sources": ["wheat", "rye", "barley", "oats", "spelt", "kamut", "triticale"],
+          "declaration": "Contains Gluten",
+          "threshold_ppm": 20
+        },
+        {
+          "id": "AL-002",
+          "name": "Crustaceans",
+          "sources": ["shrimp", "prawns", "crab", "lobster", "crayfish"],
+          "declaration": "Contains Crustaceans"
+        },
+        {
+          "id": "AL-003",
+          "name": "Eggs",
+          "sources": ["egg", "egg white", "egg yolk", "albumin", "lysozyme", "mayonnaise"],
+          "declaration": "Contains Egg"
+        },
+        {
+          "id": "AL-004",
+          "name": "Fish",
+          "sources": ["fish", "cod", "tuna", "salmon", "sardine", "anchovy", "fish sauce"],
+          "declaration": "Contains Fish"
+        },
+        {
+          "id": "AL-005",
+          "name": "Peanuts",
+          "sources": ["peanut", "groundnut", "monkey nut", "peanut oil", "peanut butter"],
+          "declaration": "Contains Peanuts",
+          "note": "Peanut is a legume but treated as a tree nut allergen"
+        },
+        {
+          "id": "AL-006",
+          "name": "Soy",
+          "sources": ["soy", "soya", "soybean", "tofu", "tempeh", "miso", "edamame"],
+          "declaration": "Contains Soy"
+        },
+        {
+          "id": "AL-007",
+          "name": "Milk",
+          "sources": ["milk", "lactose", "casein", "whey", "butter", "cheese", "cream", "ghee"],
+          "declaration": "Contains Milk"
+        },
+        {
+          "id": "AL-008",
+          "name": "Tree Nuts",
+          "sources": ["almond", "cashew", "walnut", "pecan", "pistachio", "hazelnut", "Brazil nut", "macadamia"],
+          "declaration": "Contains Tree Nuts"
+        }
+      ],
+
+      "may_contain_declaration": {
+        "rule": "If manufactured on shared equipment with allergens, must declare 'May contain traces of [allergen]'",
+        "recommended_format": "May contain traces of [allergen]",
+        "cross_contamination_threshold_ppm": 20
+      }
+    }
+  },
+
+  "additive_regulations": {
+    "claim_id": "ADD-001",
+    "regulation": "FSS (Food Products Standards and Food Additives) Regulations 2011",
+
+    "artificial_colours": {
+      "regulation_note": "All permitted colours under Schedule I of FSS (FPS&FA) Regulations 2011",
+      "prohibited_colours": [
+        {
+          "ins_code": "E102",
+          "name": "Tartrazine",
+          "aliases": ["FD&C Yellow 5", "CI 19140", "tartrazine"],
+          "risk": "Hyperactivity in children, urticaria, asthma cross-reactivity",
+          "eu_mandatory_warning": "may have an adverse effect on activity and attention in children",
+          "fssai_status": "PERMITTED_WITH_RESTRICTION",
+          "banned_in": ["Norway", "Austria"],
+          "restricted_in_india": "Cannot be used in products marketed specifically to children"
+        },
+        {
+          "ins_code": "E110",
+          "name": "Sunset Yellow FCF",
+          "aliases": ["FD&C Yellow 6", "CI 15985", "sunset yellow"],
+          "risk": "Hyperactivity in children, possible carcinogen at high doses",
+          "eu_mandatory_warning": "may have an adverse effect on activity and attention in children",
+          "fssai_status": "PERMITTED_WITH_RESTRICTION"
+        },
+        {
+          "ins_code": "E122",
+          "name": "Azorubine",
+          "aliases": ["Carmoisine", "CI 14720"],
+          "risk": "Hyperactivity in children",
+          "fssai_status": "PERMITTED_WITH_RESTRICTION"
+        },
+        {
+          "ins_code": "E129",
+          "name": "Allura Red AC",
+          "aliases": ["FD&C Red 40", "CI 16035", "allura red"],
+          "risk": "Hyperactivity, possible carcinogen",
+          "fssai_status": "PERMITTED_WITH_RESTRICTION"
+        },
+        {
+          "ins_code": "E104",
+          "name": "Quinoline Yellow",
+          "aliases": ["CI 47005", "quinoline yellow"],
+          "risk": "Hyperactivity in children",
+          "fssai_status": "PERMITTED_WITH_RESTRICTION"
+        }
+      ]
+    },
+
+    "preservatives": {
+      "regulated_preservatives": [
+        {
+          "ins_code": "E211",
+          "name": "Sodium Benzoate",
+          "aliases": ["benzoate of soda", "sodium benzoate"],
+          "interaction_risk": "Forms benzene (carcinogen) when combined with Vitamin C (ascorbic acid)",
+          "max_permitted_level_ppm": 200,
+          "fssai_status": "PERMITTED_WITH_LIMIT",
+          "restricted_in": "Children's products when combined with azo dyes"
+        },
+        {
+          "ins_code": "E210",
+          "name": "Benzoic Acid",
+          "max_permitted_level_ppm": 200,
+          "fssai_status": "PERMITTED_WITH_LIMIT"
+        },
+        {
+          "ins_code": "E202",
+          "name": "Potassium Sorbate",
+          "max_permitted_level_ppm": 1000,
+          "fssai_status": "PERMITTED_WITH_LIMIT"
+        },
+        {
+          "ins_code": "E249",
+          "name": "Potassium Nitrite",
+          "aliases": ["potassium nitrite"],
+          "risk": "Potential carcinogen formation at high temperatures",
+          "max_permitted_level_ppm": 150,
+          "fssai_status": "PERMITTED_FOR_CURED_MEATS_ONLY"
+        },
+        {
+          "ins_code": "E250",
+          "name": "Sodium Nitrite",
+          "aliases": ["sodium nitrite"],
+          "risk": "Nitrosamine formation, potential carcinogen",
+          "max_permitted_level_ppm": 150,
+          "fssai_status": "PERMITTED_FOR_CURED_MEATS_ONLY"
+        }
+      ]
+    },
+
+    "emulsifiers": {
+      "common_emulsifiers": [
+        {
+          "ins_code": "E322",
+          "name": "Lecithin",
+          "aliases": ["soy lecithin", "sunflower lecithin", "lecithin E322", "INS 322"],
+          "risk": "Generally safe, but soy-derived — allergen concern",
+          "fssai_status": "PERMITTED"
+        },
+        {
+          "ins_code": "E471",
+          "name": "Mono and Diglycerides of Fatty Acids",
+          "aliases": ["mono-and-diglycerides", "glycerides", "INS 471"],
+          "risk": "May contain trans fats if derived from partially hydrogenated oils",
+          "fssai_status": "PERMITTED",
+          "note": "Check source — if from PHO, contains trans fat"
+        },
+        {
+          "ins_code": "E407",
+          "name": "Carrageenan",
+          "aliases": ["carrageenan", "Irish moss", "E407"],
+          "risk": "Potential gut inflammation, banned from EU infant formula",
+          "fssai_status": "PERMITTED_FOR_ADULTS",
+          "eu_ban": "Banned from infant formula in EU since 2018"
+        }
+      ]
+    },
+
+    "sweeteners": {
+      "artificial_sweeteners": [
+        {
+          "ins_code": "E951",
+          "name": "Aspartame",
+          "aliases": ["aspartame", "NutraSweet", "Equal", "APM"],
+          "adi_mg_per_kg": 40,
+          "risk": "IARC Group 2B possible carcinogen (2023); contraindicated in PKU",
+          "mandatory_warning": "Contains aspartame — Phenylketonurics: Contains Phenylalanine",
+          "fssai_status": "PERMITTED_WITH_MANDATORY_WARNING",
+          "severity": "MODERATE"
+        },
+        {
+          "ins_code": "E950",
+          "name": "Acesulfame-K",
+          "aliases": ["acesulfame potassium", "Ace-K"],
+          "adi_mg_per_kg": 15,
+          "fssai_status": "PERMITTED",
+          "severity": "LOW"
+        },
+        {
+          "ins_code": "E955",
+          "name": "Sucralose",
+          "aliases": ["sucralose", "Splenda"],
+          "adi_mg_per_kg": 15,
+          "fssai_status": "PERMITTED",
+          "severity": "LOW"
+        },
+        {
+          "ins_code": "E954",
+          "name": "Saccharin",
+          "aliases": ["saccharin", "Sweet N Low"],
+          "adi_mg_per_kg": 5,
+          "risk": "Previously linked to bladder cancer in rats; human risk at food levels not established",
+          "fssai_status": "PERMITTED_WITH_LIMIT",
+          "severity": "LOW"
+        },
+        {
+          "ins_code": "E960",
+          "name": "Stevia",
+          "aliases": ["stevia", "steviol glycosides", "Reb-A", "rebaudioside A"],
+          "adi_mg_per_kg": 4,
+          "fssai_status": "PERMITTED",
+          "risk": "Generally safe; zero glycemic impact",
+          "severity": "LOW"
+        }
+      ]
+    },
+
+    "antioxidants": {
+      "regulated_antioxidants": [
+        {
+          "ins_code": "E320",
+          "name": "BHA",
+          "aliases": ["butylated hydroxyanisole", "BHA"],
+          "risk": "Possible carcinogen (IARC Group 2B); endocrine disruptor",
+          "fssai_status": "PERMITTED_WITH_LIMIT",
+          "max_level_ppm": 200,
+          "severity": "HIGH"
+        },
+        {
+          "ins_code": "E321",
+          "name": "BHT",
+          "aliases": ["butylated hydroxytoluene", "BHT"],
+          "risk": "Possible carcinogen; liver toxicity at high doses",
+          "fssai_status": "PERMITTED_WITH_LIMIT",
+          "max_level_ppm": 200,
+          "severity": "HIGH"
+        }
+      ]
+    },
+
+    "flavour_enhancers": {
+      "regulated_enhancers": [
+        {
+          "ins_code": "E621",
+          "name": "Monosodium Glutamate",
+          "aliases": ["MSG", "ajinomoto", "sodium glutamate", "E621", "INS 621"],
+          "fssai_status": "PERMITTED",
+          "risk": "Generally safe at food levels; rare sensitivity in susceptible individuals",
+          "severity": "LOW",
+          "mandatory_declaration": "Product labels must declare MSG if used"
+        }
+      ]
+    }
+  },
+
+  "nova_classification": {
+    "claim_id": "NOVA-001",
+    "source": "Monteiro et al., Public Health Nutrition 2019; WHO PAHO Nutrient Profile Model",
+    "note": "NOVA is not an FSSAI classification but is referenced in FSSAI FOPL discussions and global health guidelines",
+
+    "nova_1": {
+      "class": 1,
+      "name": "Unprocessed or Minimally Processed Foods",
+      "description": "Natural foods with no industrial processing or minimal physical processing",
+      "examples": ["fresh fruits", "vegetables", "plain milk", "plain yogurt", "eggs", "fresh meat", "dried legumes"],
+      "risk": "LOW"
+    },
+    "nova_2": {
+      "class": 2,
+      "name": "Processed Culinary Ingredients",
+      "description": "Substances extracted from foods for use in cooking",
+      "examples": ["vegetable oils", "butter", "flour", "pasta", "sugar", "salt"],
+      "risk": "LOW"
+    },
+    "nova_3": {
+      "class": 3,
+      "name": "Processed Foods",
+      "description": "Products made from NOVA 1 + 2 with simple processing",
+      "examples": ["canned vegetables", "salted nuts", "cheese", "cured meats"],
+      "risk": "MODERATE"
+    },
+    "nova_4": {
+      "class": 4,
+      "name": "Ultra-Processed Foods",
+      "description": "Industrial formulations from multiple ingredients, many never used in home kitchens",
+      "indicator_ingredients": [
+        "artificial flavour", "artificial flavor", "artificial colour",
+        "colour identical to natural", "emulsifier", "stabilizer",
+        "thickener", "humectant", "flavour enhancer", "sequestrant",
+        "anti-caking agent", "modified starch", "hydrolysed protein",
+        "textured protein", "interesterified fat", "high fructose corn syrup",
+        "maltodextrin", "mechanically separated meat"
+      ],
+      "examples": ["biscuits", "carbonated drinks", "instant noodles", "chips", "candy"],
+      "health_risk": "CRITICAL",
+      "associated_risks": [
+        "obesity", "type 2 diabetes", "cardiovascular disease",
+        "depression", "all-cause mortality", "colorectal cancer"
+      ]
+    }
+  },
+
+  "mandatory_label_declarations": {
+    "claim_id": "MLD-001",
+    "regulation": "FSS (Labelling and Display) Regulations 2020, Regulation 3",
+
+    "required_on_all_labels": [
+      {
+        "field": "product_name",
+        "mandatory": true,
+        "description": "True name of the food — generic name or coined name with description"
+      },
+      {
+        "field": "ingredients_list",
+        "mandatory": true,
+        "format": "Descending order by weight at time of manufacturing",
+        "clause": "Regulation 3(2)"
+      },
+      {
+        "field": "nutritional_information",
+        "mandatory": true,
+        "required_nutrients": [
+          "energy_kcal", "total_fat_g", "saturated_fat_g", "trans_fat_g",
+          "carbohydrate_g", "total_sugar_g", "protein_g", "sodium_mg"
+        ],
+        "format": "per 100g and per serving",
+        "clause": "Regulation 3(3)"
+      },
+      {
+        "field": "net_quantity",
+        "mandatory": true,
+        "unit": "metric — g, ml, kg, l"
+      },
+      {
+        "field": "date_marking",
+        "mandatory": true,
+        "format": "Best Before DD/MM/YYYY or Best Before End MM/YYYY",
+        "note": "Use by date required for perishable products"
+      },
+      {
+        "field": "fssai_license_number",
+        "mandatory": true,
+        "format": "14-digit FSSAI license number",
+        "clause": "Regulation 3(1)(e)"
+      },
+      {
+        "field": "manufacturer_address",
+        "mandatory": true,
+        "description": "Full postal address of manufacturer in India or importer for imported products"
+      },
+      {
+        "field": "country_of_origin",
+        "mandatory": true,
+        "applies_to": "all packaged foods"
+      },
+      {
+        "field": "vegetarian_non_vegetarian_symbol",
+        "mandatory": true,
+        "veg_symbol": "Green filled circle inside green square",
+        "non_veg_symbol": "Brown filled triangle inside brown square"
+      },
+      {
+        "field": "batch_lot_code",
+        "mandatory": true
+      },
+      {
+        "field": "customer_care",
+        "mandatory": true,
+        "description": "Contact number or address of manufacturer for complaints"
+      }
+    ],
+
+    "conditional_declarations": [
+      {
+        "field": "gluten_declaration",
+        "required_when": "product contains wheat, rye, barley, oats or derivatives",
+        "format": "Contains gluten"
+      },
+      {
+        "field": "phenylketonuria_warning",
+        "required_when": "product contains aspartame",
+        "format": "Phenylketonurics: Contains Phenylalanine"
+      },
+      {
+        "field": "laxative_warning",
+        "required_when": "product contains polyols > 10g per 100g",
+        "format": "Excessive consumption may produce laxative effects"
+      },
+      {
+        "field": "caffeine_warning",
+        "required_when": "caffeine > 150mg per litre in beverages",
+        "format": "High Caffeine Content: Not recommended for children, pregnant women, or caffeine-sensitive individuals"
+      },
+      {
+        "field": "alcohol_content",
+        "required_when": "contains alcohol > 0.5% ABV",
+        "format": "X% Alcohol by Volume"
+      },
+      {
+        "field": "irradiation_declaration",
+        "required_when": "product has been irradiated",
+        "format": "Treated with Ionizing Radiation"
+      }
+    ]
+  },
+
+  "food_category_specific_rules": {
+    "infant_formula": {
+      "claim_id": "CAT-IF-001",
+      "regulation": "FSS (Food for Infant Nutrition) Regulations 2020",
+      "prohibited_claims": [
+        "best for baby", "closest to breast milk", "humanised", "maternalised",
+        "promotes brain development", "improves IQ"
+      ],
+      "prohibited_ingredients": ["carrageenan", "partially hydrolysed proteins without allergen declaration"],
+      "mandatory_declarations": ["iron", "calcium", "vitamin D", "omega-3 if claimed"],
+      "minimum_iron_mg_per100kcal": 0.45,
+      "maximum_sodium_mg_per100kcal": 60
+    },
+
+    "beverages": {
+      "claim_id": "CAT-BEV-001",
+      "fruit_juice_standards": {
+        "100_percent_juice": {
+          "condition": "no added water, no added sugar, no concentrates reconstituted above original juice",
+          "prohibited_claims_if_diluted": ["100% juice", "pure juice", "fresh juice"]
+        },
+        "fruit_drink": {
+          "minimum_juice_content_pct": 10,
+          "note": "If juice content < 10%, cannot use the word 'juice' prominently"
+        },
+        "nectar": {
+          "minimum_juice_content_pct": 25
+        }
+      },
+      "carbonated_drinks": {
+        "mandatory_declarations": ["caffeine if > 150mg/litre"],
+        "high_caffeine_threshold_mg_per_litre": 150
+      }
+    },
+
+    "packaged_water": {
+      "claim_id": "CAT-PW-001",
+      "prohibited_claims": ["medicinal", "therapeutic", "cures", "treats"],
+      "permitted_mineral_claims": {
+        "mineral_water": "naturally contains minerals from protected source",
+        "packaged_drinking_water": "no specific mineral content claims without testing"
+      }
+    },
+
+    "edible_oils": {
+      "claim_id": "CAT-EO-001",
+      "regulation": "FSSAI Trans Fat Regulations 2022",
+      "trans_fat_limit_pct": 2,
+      "effective_date": "2022-01-01",
+      "mandatory_declaration": "trans fat content must be declared on label",
+      "prohibited_claims": [
+        "trans fat free if > 0.2g per 100g",
+        "cholesterol free if saturated fat > 1.5g per 100g"
+      ]
+    },
+
+    "health_supplements": {
+      "claim_id": "CAT-HS-001",
+      "regulation": "FSS (Health Supplements, Nutraceuticals) Regulations 2022",
+      "mandatory_disclaimer": "This product is not intended to diagnose, treat, cure or prevent any disease",
+      "prohibited_disease_claims": true,
+      "permitted_structure_function_claims": true,
+      "required_registration": "FSSAI product approval required for novel ingredients",
+      "maximum_nutrient_levels": "Cannot exceed UL (Upper Intake Level) per serving"
+    }
+  },
+
+  "prohibited_claims": {
+    "claim_id": "PC-001",
+    "regulation": "FSS (Labelling) Regulations 2020, Regulation 5; FSS Act 2006, Section 53",
+
+    "absolutely_prohibited": [
+      {
+        "claim_pattern": "cures|treats|prevents|heals",
+        "applies_to": "all foods except licensed medical foods",
+        "violation_class": "PROHIBITED_CLAIM",
+        "severity": "CRITICAL",
+        "penalty": "Up to INR 5 lakh per offence"
+      },
+      {
+        "claim_pattern": "100% natural|all natural",
+        "condition": "when product contains artificial additives, colours, or preservatives",
+        "violation_class": "MISLEADING_CLAIM",
+        "severity": "HIGH"
+      },
+      {
+        "claim_pattern": "clinically proven|doctor recommended",
+        "condition": "without documented clinical evidence and FSSAI approval",
+        "violation_class": "PROHIBITED_CLAIM",
+        "severity": "CRITICAL"
+      },
+      {
+        "claim_pattern": "slimming|fat burning|detox|detoxifying",
+        "applies_to": "general food products",
+        "violation_class": "PROHIBITED_CLAIM",
+        "severity": "CRITICAL"
+      },
+      {
+        "claim_pattern": "boosts immunity|builds immunity",
+        "condition": "without meeting source-of-vitamin requirements",
+        "violation_class": "PROHIBITED_CLAIM",
+        "severity": "HIGH"
+      },
+      {
+        "claim_pattern": "for diabetics|controls diabetes|lowers blood sugar",
+        "condition": "without FSDU approval",
+        "violation_class": "PROHIBITED_CLAIM",
+        "severity": "CRITICAL"
+      }
+    ],
+
+    "misleading_marketing_practices": [
+      {
+        "practice": "ingredient_order_manipulation",
+        "description": "Listing sugar under multiple aliases to artificially lower its apparent position in the ingredient list",
+        "example": "Sugar, Corn Syrup, Dextrose listed separately instead of combined sugar total",
+        "violation_class": "DECEPTIVE_PRACTICE",
+        "severity": "HIGH",
+        "fssai_reference": "FSS Act 2006, Section 53 — misleading label"
+      },
+      {
+        "practice": "serving_size_manipulation",
+        "description": "Setting unrealistically small serving sizes to make nutrients appear lower",
+        "example": "Declaring 200g product in 4x50g servings to make sugar appear half",
+        "violation_class": "DECEPTIVE_PRACTICE",
+        "severity": "HIGH"
+      },
+      {
+        "practice": "front_vs_back_discrepancy",
+        "description": "Prominent front-of-pack claim contradicted by ingredient list or nutrition table",
+        "example": "'No Added Sugar' on front but dextrose in ingredient list",
+        "violation_class": "DECEPTIVE_PRACTICE",
+        "severity": "CRITICAL"
+      },
+      {
+        "practice": "green_washing",
+        "description": "Use of natural imagery, green colour, leaf graphics to imply naturalness without being natural",
+        "violation_class": "MISLEADING_CLAIM",
+        "severity": "MEDIUM"
+      }
+    ]
+  },
+
+  "special_dietary_populations": {
+    "claim_id": "SDP-001",
+    "diabetics": {
+      "safe_sugar_threshold_g_per100g": 5,
+      "safe_gi_max": 55,
+      "flag_ingredients": [
+        "maltodextrin", "dextrose", "glucose", "corn syrup", "refined wheat flour",
+        "white rice flour", "sugar", "high fructose corn syrup", "honey", "agave"
+      ],
+      "recommended_max_sodium_mg_per100g": 200,
+      "reference": "American Diabetes Association Standards 2024; ICMR NIN 2024"
+    },
+    "children_under_12": {
+      "restricted_additives": ["E102", "E104", "E110", "E122", "E123", "E124", "E129"],
+      "max_sugar_g_per100g": 10,
+      "max_sodium_mg_per100g": 600,
+      "max_saturated_fat_g_per100g": 4,
+      "marketing_restrictions": "HFSS foods cannot be marketed to children under 16 per FSSAI draft 2023",
+      "reference": "FSSAI Draft Regulations on Junk Food Marketing to Children 2023"
+    },
+    "pregnant_women": {
+      "avoid": ["aspartame", "excessive caffeine", "unpasteurised cheese", "raw eggs"],
+      "caffeine_max_mg_per_day": 200,
+      "reference": "ICMR NIN Dietary Guidelines for Pregnant Women 2024"
+    },
+    "heart_patients": {
+      "max_sodium_mg_per100g": 200,
+      "max_saturated_fat_g_per100g": 1.5,
+      "max_trans_fat_g_per100g": 0.1,
+      "max_cholesterol_mg_per100g": 20,
+      "reference": "WHO CVD Prevention Guidelines 2023"
+    }
+  },
+
+  "violation_classification": {
+    "claim_id": "VC-001",
+
+    "LABEL_DECEPTION": {
+      "description": "Numerical threshold not met for claimed nutrient level",
+      "examples": ["Low Calorie when calories > 40 per 100g", "High Protein when protein < 10g per 100g"],
+      "severity": "HIGH",
+      "penalty_range": "Warning to INR 3 lakh"
+    },
+    "INGREDIENT_CLAIM_VIOLATION": {
+      "description": "Ingredient-based claim contradicted by ingredient list",
+      "examples": ["Natural claim when E-numbers present", "No Added Sugar when sugar aliases present"],
+      "severity": "HIGH",
+      "penalty_range": "INR 2-5 lakh"
+    },
+    "PROHIBITED_CLAIM_VIOLATION": {
+      "description": "Use of explicitly prohibited claim categories",
+      "examples": ["Cures diabetes", "Boosts immunity without qualification", "Slimming"],
+      "severity": "CRITICAL",
+      "penalty_range": "INR 5-10 lakh + product recall"
+    },
+    "COMPARATIVE_CLAIM_VIOLATION": {
+      "description": "Comparative claim made without sufficient reduction vs reference product",
+      "examples": ["Reduced Fat when reduction < 25%"],
+      "severity": "MEDIUM",
+      "penalty_range": "Warning to INR 2 lakh"
+    },
+    "MISLEADING_CLAIM": {
+      "description": "Claim that is technically not false but creates a misleading impression",
+      "examples": ["Cholesterol Free on vegetable oil — plants never contain cholesterol"],
+      "severity": "MEDIUM",
+      "penalty_range": "Warning to INR 2 lakh"
+    },
+    "HEALTH_CLAIM_VIOLATION": {
+      "description": "Unapproved or unsubstantiated health claim",
+      "examples": ["Brain food", "Improves memory"],
+      "severity": "CRITICAL",
+      "penalty_range": "INR 5 lakh + possible prosecution"
+    },
+    "CERTIFICATION_MISSING": {
+      "description": "Claim requiring third-party certification (organic) made without certified status",
+      "severity": "HIGH",
+      "penalty_range": "INR 3-7 lakh"
+    },
+    "DECEPTIVE_PRACTICE": {
+      "description": "Systematic deceptive marketing practices",
+      "severity": "CRITICAL",
+      "penalty_range": "INR 10 lakh + criminal prosecution under FSS Act Section 59"
+    },
+    "ADDITIVE_VIOLATION": {
+      "description": "Use of prohibited additive or exceeding permitted levels",
+      "severity": "HIGH",
+      "penalty_range": "INR 5 lakh + product recall + FSSAI notice"
+    },
+    "ALLERGEN_UNDECLARED": {
+      "description": "Mandatory allergen not declared on label",
+      "severity": "CRITICAL",
+      "penalty_range": "INR 5-10 lakh + mandatory recall"
+    }
+  }
+}
