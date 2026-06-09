@@ -38,6 +38,12 @@ from modules.trust import (
     FSSAI_REGULATIONS,
     ADULTERATION_PATTERNS,
     COUNTERFEIT_INDICATORS,
+    get_adulteration_patterns_for_category,
+    get_all_adulteration_categories,
+    get_counterfeit_indicators,
+    get_fssai_regulations,
+    get_claim_thresholds,
+    CVLabelAuthenticityScorer,
 )
 
 
@@ -336,18 +342,6 @@ class ServiceStatusResponse(BaseModel):
 async def analyze_trust(
     request: TrustAnalyzeRequest,
 ) -> TrustAnalyzeResponse:
-    """
-    Analyze product trustworthiness.
-
-    This endpoint performs a complete trust analysis on a product:
-    - FSSAI license validation
-    - Claim verification (front-of-pack vs back-label)
-    - Adulteration detection
-    - Label anomaly detection
-    - Counterfeit detection
-    - Authenticity score calculation
-    - Brand trust scoring
-    """
 
     try:
 
@@ -472,14 +466,6 @@ async def analyze_trust(
 async def validate_fssai_license(
     request: ValidateFSSAIRequest,
 ) -> FSSAIValidationResponse:
-    """
-    Validate FSSAI license number.
-
-    This endpoint validates a 14-digit FSSAI license number:
-    - First tries web scraping from FOSCOS portal
-    - Falls back to pattern validation if web scrape fails
-    - Returns license details if found
-    """
 
     try:
 
@@ -541,12 +527,6 @@ async def validate_fssai_license(
 async def validate_fssai_batch(
     request: BatchFSSAIRequest,
 ) -> BatchFSSAIResponse:
-    """
-    Batch validate multiple FSSAI license numbers.
-
-    This endpoint validates multiple FSSAI license numbers in parallel
-    with concurrency control to avoid rate limiting.
-    """
 
     try:
 
@@ -644,16 +624,6 @@ async def get_authenticity_score(
     contradictions_count: int = Query(0, ge=0, description="Number of contradictions"),
     label_anomalies_count: int = Query(0, ge=0, description="Number of label anomalies"),
 ) -> AuthenticityScoreResponse:
-    """
-    Calculate authenticity score based on input parameters.
-
-    This endpoint calculates an authenticity score using the weighted formula:
-    - FSSAI validity: 25%
-    - Adulteration risk: 25%
-    - Counterfeit risk: 20%
-    - Label format: 15%
-    - Claim verification: 15%
-    """
 
     fssai_score = 100 if fssai_valid else 0
 
@@ -742,16 +712,6 @@ async def get_authenticity_score(
 async def get_brand_trust(
     brand_name: str,
 ) -> BrandTrustScore:
-    """
-    Get brand trust score.
-
-    This endpoint returns the trust score for a brand based on:
-    - Total number of scans
-    - Violation count
-    - Adulteration incidents
-    - Counterfeit products detected
-    - Average authenticity score
-    """
 
     try:
 
@@ -826,16 +786,6 @@ async def get_brand_trust(
 async def get_adulteration_patterns(
     category: str,
 ) -> AdulterationPatternsResponse:
-    """
-    Get adulteration patterns for a product category.
-
-    This endpoint returns known adulteration patterns including:
-    - Common adulterants
-    - Health risks
-    - Detection methods
-    """
-
-    from modules.trust import get_adulteration_patterns_for_category
 
     patterns = get_adulteration_patterns_for_category(category)
 
@@ -857,11 +807,6 @@ async def get_adulteration_patterns(
     description="Get all product categories with known adulteration patterns.",
 )
 async def get_all_adulteration_categories_endpoint() -> Dict[str, Any]:
-    """
-    Get all product categories with known adulteration patterns.
-    """
-
-    from modules.trust import get_all_adulteration_categories
 
     categories = get_all_adulteration_categories()
 
@@ -883,18 +828,6 @@ async def get_all_adulteration_categories_endpoint() -> Dict[str, Any]:
     description="Get all counterfeit indicators by category.",
 )
 async def get_counterfeit_indicators_endpoint() -> Dict[str, Any]:
-    """
-    Get all counterfeit indicators.
-
-    This endpoint returns indicators for:
-    - FSSAI mismatches
-    - Logo anomalies
-    - Label anomalies
-    - Price anomalies
-    - Source anomalies
-    """
-
-    from modules.trust import get_counterfeit_indicators
 
     indicators = get_counterfeit_indicators()
 
@@ -914,18 +847,9 @@ async def get_counterfeit_indicators_endpoint() -> Dict[str, Any]:
     description="Get all FSSAI regulations database.",
 )
 async def get_fssai_regulations_endpoint() -> Dict[str, Any]:
-    """
-    Get all FSSAI regulations.
-
-    This endpoint returns the complete FSSAI regulations database
-    including act, section, clause, penalty information.
-    """
-
-    from modules.trust import get_fssai_regulations
 
     regulations = get_fssai_regulations()
 
-    # Convert to serializable dict
     serializable_regulations = {}
 
     for key, reg in regulations.items():
@@ -970,17 +894,6 @@ async def get_fssai_regulations_endpoint() -> Dict[str, Any]:
     description="Get all claim verification thresholds.",
 )
 async def get_claim_thresholds_endpoint() -> Dict[str, Any]:
-    """
-    Get all claim verification thresholds.
-
-    This endpoint returns the thresholds for verifying claims like:
-    - High protein
-    - Low fat
-    - Sugar free
-    - etc.
-    """
-
-    from modules.trust import get_claim_thresholds
 
     thresholds = get_claim_thresholds()
 
@@ -1001,15 +914,6 @@ async def get_claim_thresholds_endpoint() -> Dict[str, Any]:
     description="Get health and status of trust intelligence service.",
 )
 async def get_service_status() -> ServiceStatusResponse:
-    """
-    Get service status.
-
-    This endpoint returns:
-    - Service health status
-    - Component status
-    - Cache statistics
-    - Supported categories
-    """
 
     status_data = trust_service.get_service_status()
 
@@ -1039,12 +943,6 @@ async def get_service_status() -> ServiceStatusResponse:
     description="Clear the trust intelligence service cache.",
 )
 async def clear_trust_cache() -> Dict[str, Any]:
-    """
-    Clear the trust intelligence service cache.
-
-    This endpoint clears all cached responses from the trust service.
-    Useful when product data has been updated or for debugging.
-    """
 
     trust_service.clear_cache()
 
@@ -1064,9 +962,6 @@ async def clear_trust_cache() -> Dict[str, Any]:
     description="Health check endpoint for trust service.",
 )
 async def trust_health() -> Dict[str, Any]:
-    """
-    Health check endpoint for trust service.
-    """
 
     return {
 
@@ -1109,7 +1004,6 @@ async def trust_health() -> Dict[str, Any]:
     }
 
 
-
 @router.get(
     "/leaderboard",
     status_code=status.HTTP_200_OK,
@@ -1121,11 +1015,7 @@ async def get_brand_leaderboard(
     limit: int = Query(50, ge=1, le=100, description="Number of brands to return"),
     days: int = Query(90, ge=7, le=365, description="Look back period in days"),
 ) -> Dict[str, Any]:
-    """
-    Get brand trust leaderboard.
-    
-    Returns brands ranked by trust score from highest to lowest.
-    """
+
     try:
         leaderboard = await trust_service.get_brand_leaderboard(category, limit, days)
         
@@ -1164,19 +1054,10 @@ class CVLabelUploadRequest(BaseModel):
 async def score_label_image(
     request: CVLabelUploadRequest,
 ) -> Dict[str, Any]:
-    """
-    Score label image authenticity using computer vision.
-    
-    Analyzes:
-    - Logo match with official brand logo
-    - Font consistency across label
-    - Layout compliance with FSSAI standards
-    - FSSAI license format and vegetarian symbol
-    """
+
     try:
-        from modules.trust.trust_service import CVLabelAuthenticityScorer
-        
         scorer = CVLabelAuthenticityScorer()
+        
         result = await scorer.score_label_authenticity(
             image_base64=request.image_base64,
             brand_name=request.brand_name,
@@ -1207,6 +1088,5 @@ async def score_label_image(
 
 
 # ==========================================================
-# END OF FILE - trust_router.py
-# TOTAL LINES: 850
+# END OF FILE - trust.py
 # ==========================================================
