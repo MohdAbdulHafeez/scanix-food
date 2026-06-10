@@ -3,8 +3,7 @@ from typing import List
 from fastapi import APIRouter
 from fastapi import File
 from fastapi import HTTPException
-from fastapi import UploadFile , Depends
-from modules.user_intelligence.auth import get_current_user
+from fastapi import UploadFile
 
 from modules.scan.scan_engine import (
     FAVORITES,
@@ -269,10 +268,3 @@ async def scan_stats():
     }
 
 
-@router.post("/scan")
-async def scan_product(
-    file: UploadFile = File(...),
-    user_id: str = Depends(get_current_user),  # Get from auth
-):
-    result = await master_scan_engine.scan_product(file, user_id)
-    return result
