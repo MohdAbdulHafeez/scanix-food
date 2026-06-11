@@ -1,0 +1,61 @@
+# ==========================================================
+# SCANIX AI — Backend dependencies
+# Generated from the project's actual imports.
+# Pinned versions reflect the verified local environment;
+# others use a safe lower bound. Run:  pip install -r requirements.txt
+# ==========================================================
+
+# --- Web framework / server ---
+fastapi==0.115.6
+starlette==0.41.3
+uvicorn[standard]==0.32.1
+python-multipart>=0.0.9
+python-dotenv==1.0.1
+
+# --- Data models / settings ---
+pydantic==2.10.3
+pydantic-settings>=2.5.0
+
+# --- HTTP clients ---
+httpx>=0.27.0
+aiohttp>=3.10.0
+requests>=2.32.0
+
+# --- Scan pipeline (OCR / vision / barcode) ---
+easyocr>=1.7.1
+opencv-python-headless>=4.10.0
+pyzbar>=0.1.9
+numpy>=1.26.0
+Pillow>=10.4.0
+
+# --- Matching / resilience / caching ---
+rapidfuzz>=3.10.0
+tenacity>=9.0.0
+cachetools>=5.5.0
+
+# --- Auth / security ---
+PyJWT==2.10.1
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# --- Database / storage ---
+sqlalchemy>=2.0.0
+supabase>=2.9.0
+
+# --- AI providers ---
+google-generativeai>=0.8.0
+
+# --- Reports / complaints (PDF + QR) ---
+reportlab>=4.2.0
+qrcode>=8.0
+sendgrid>=6.11.0
+
+# --- Web RAG / scraping ---
+beautifulsoup4>=4.12.0
+
+# --- Voice (optional features) ---
+edge-tts>=6.1.0
+faster-whisper>=1.0.0
+
+# --- Logging ---
+loguru>=0.7.0
